@@ -1,0 +1,5 @@
+XGZP6847	KEYWORD1
+begin		KEYWORD2
+startMeasurement	KEYWORD2
+readPressureBar	KEYWORD2
+readTemperatureC	KEYWORD2
