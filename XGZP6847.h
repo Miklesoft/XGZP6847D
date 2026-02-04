@@ -33,5 +33,19 @@ private:
     bool writeReg8(uint8_t reg, uint8_t val);
 
     static constexpr float K_FACTOR = 8.0;      // laut Datenblatt
+//  The K value is selected according to the positive pressure value only.
+//  Positive Pressure Range (kPa)	K Value
+//  500 < P ≤ 1000	                 8
+//  260 < P ≤ 500	                16
+//  130 < P ≤ 260	                32
+//  65 < P ≤ 130	                64
+//  32 < P ≤ 65	                   128
+//  16 < P ≤ 32	                   256
+//  8 < P ≤ 16	                   512
+//  4 < P ≤ 8	                  1024
+//  2 ≤ P ≤ 4	                  2048
+//  1 ≤ P < 2	                  4096
+
     static constexpr float PA_TO_BAR = 1e-5;
 };
+
